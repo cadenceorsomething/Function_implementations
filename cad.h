@@ -13,4 +13,6 @@ namespace cad {
 
 namespace demonstrate {
     void static_variable();
+    void static_variable_in_class();
+    void static_increment();
 }
