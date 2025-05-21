@@ -1,5 +1,6 @@
 #include "cad.h"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class obj {
@@ -24,14 +25,6 @@ public:
 };
 
 int main() {
-	/* FUTURE NOTE FOR MYSELF : 
-	cad pls do a function
-	that counts how many times 
-	a number has been repeated*/
-
-
-	demonstrate::hash_map::basic_implementation();
-
 
 	return 0;
 }

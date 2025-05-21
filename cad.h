@@ -2,6 +2,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <string>
+#include <vector>
 
 /*  here i will apply anything i read 
     about in article to further my 
@@ -11,6 +12,7 @@ using namespace std;
 
 namespace cad {
 	int do_something(int a, int b);
+    void count_frequency(vector <int> v);
 }
 
 namespace demonstrate {
@@ -22,5 +24,9 @@ namespace demonstrate {
 
     namespace hash_map {
         void basic_implementation();
+        void basic_insertion();
     }
+
+
 }
+

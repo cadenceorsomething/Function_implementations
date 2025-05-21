@@ -3,7 +3,8 @@
 #include <iostream>
 #include <unordered_map>
 #include <string>
-
+#include <limits>
+#include <vector>
 /*  here i will apply anything i read
 	about in article to further my
 	understanding of a given topic.*/
@@ -15,6 +16,15 @@ using namespace std;
 namespace cad {
 	int do_something(int a, int b) {
 		return a * b;
+	}
+	void count_frequency(vector <int> v) {
+		unordered_map <int, int> freq;
+
+		for (int n : v)
+			freq[n]++;
+
+		for (auto i : freq)
+			cout << "number: " << i.first << ", occurences: " << i.second << endl;
 	}
 
 }
@@ -83,10 +93,37 @@ namespace demonstrate {
 	}
 
 	namespace hash_map {
+		static pair <int, string> input_pair() {
+			pair <int, string> ret;
+			cout << "input number: ";
+			cin >> ret.first;
+			cout << "input string: ";
+			cin.ignore(1, '\n');			// i looked it up and turns out if i am inputting a number, the max count will be 1 anyways
+			getline(cin, ret.second);
+			return ret;
+		}
+
 		void basic_implementation() {
 			unordered_map <int, string> um = { {1,"hello"}, {2,"gang"} };
 
 			for (auto i : um) {
+				cout << i.first << ": " << i.second << endl;
+			}
+		}
+		void basic_insertion() {
+			unordered_map <int, string> map;
+			bool b;
+			
+			
+			while (1) {
+				cout << "INSERTION:" << endl;
+				map.insert(input_pair());
+				cout << "break? (1 for break): ";
+				cin >> b;
+				if (b == 1) break;
+			}
+
+			for (auto i : map) {
 				cout << i.first << ": " << i.second << endl;
 			}
 		}
