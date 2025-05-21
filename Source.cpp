@@ -1,24 +1,36 @@
 #include "cad.h"
 #include <iostream>
+using namespace std;
 
-class student {
+class obj {
+	int val;
 public:
-	static int total;
+	obj() : val(0) {
+		cout << "constuctor called!" << endl;
+	}
+	~obj() {
+		cout << "destuctor called!" << endl;
+	}
 
-	student() {
-		total++;
+	void set(int val) {
+		this->val = val;
+	}
+	int get_val() {
+		return val;
+	}
+	void print() {
+		std::cout << val << " ";
 	}
 };
 
-int student::total = 0;
-
-using std::cout, std::endl;
-
 int main() {
+	/* FUTURE NOTE FOR MYSELF : 
+	cad pls do a function
+	that counts how many times 
+	a number has been repeated*/
 
-	Box::print();
-	Box::scale(2);
-	Box::print();
+
+	demonstrate::hash_map::basic_implementation();
 
 
 	return 0;

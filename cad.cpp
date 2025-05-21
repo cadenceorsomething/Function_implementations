@@ -1,6 +1,8 @@
 #pragma once
-#include <iostream>
 #include "cad.h"
+#include <iostream>
+#include <unordered_map>
+#include <string>
 
 /*  here i will apply anything i read
 	about in article to further my
@@ -49,8 +51,6 @@ namespace demonstrate {
 			helper::static_variable(2, 1);
 	}
 	void static_variable_in_class   () {
-
-
 		static_class c1;
 		static_class c2;
 
@@ -64,5 +64,39 @@ namespace demonstrate {
 		global_static_variable++;
 		cout << global_static_variable << " ";
 	}
+
+	void reference() {
+		// a variable
+		int var = 3;
+		cout << "int var = 3;"<< endl;
+
+		cout << "var = " << var << "\n" << endl;
+
+		int& ref = var;
+		cout << "int& ref = var;" << endl;
+
+		ref = 2;
+		cout << "ref = 2;\n" << endl;
+
+		cout << "var = " << var << endl;
+
+	}
+
+	namespace hash_map {
+		void basic_implementation() {
+			unordered_map <int, string> um = { {1,"hello"}, {2,"gang"} };
+
+			for (auto i : um) {
+				cout << i.first << ": " << i.second << endl;
+			}
+		}
+	}
+
+}
+
+namespace observations {
+	// i didnt know this existed damn...
+	wchar_t wide_char;
+
 
 }
